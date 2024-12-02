@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Institute of Technology</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: linear-gradient(135deg, #003366, #004d99);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        nav {
+            background-color: #004d99;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #0066cc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .department {
+            margin: 20px 0;
+            padding: 20px;
+            border: none;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .department:hover {
+            transform: translateY(-5px);
+        }
+        .department h3 {
+            color: #003366;
+            border-bottom: 2px solid #004d99;
+            padding-bottom: 10px;
+        }
+        footer {
+            background: linear-gradient(135deg, #003366, #004d99);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: 40px;
+        }
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .facilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .facility {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>United Institute of Technology</h1>
+        <p>Committed to Excellence</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#departments">Departments</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Welcome to UIT</h2>
+            <img src="UIT5.jpg" alt="College Campus" class="hero-image">
+            <p>United Institute of Technology is a premier engineering institution committed to providing quality education since 2003. Our state-of-the-art facilities and experienced faculty ensure the best learning experience for our students.</p>
+            
+            <div class="facilities">
+                <div class="facility">
+                    <h3>Modern Labs</h3>
+                    <p>Well-equipped laboratories with latest technology</p>
+                </div>
+                <div class="facility">
+                    <h3>Library</h3>
+                    <p>Extensive collection of books and digital resources</p>
+                </div>
+                <div class="facility">
+                    <h3>Sports</h3>
+                    <p>Multiple sports facilities and annual tournaments</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="departments" class="section">
+            <h2>Our Departments</h2>
+            <div class="department">
+                <h3>Computer Science & Engineering</h3>
+                <p>4-year B.Tech Degree Program in Computer Science and Engineering</p>
+                <p>Seats: 120</p>
+                <p>Features: AI/ML Lab, Cloud Computing Lab, Industry Partnerships</p>
+            </div>
+
+            <div class="department">
+                <h3>Mechanical Engineering</h3>
+                <p>4-year B.Tech Degree Program in Mechanical Engineering</p>
+                <p>Seats: 120</p>
+                <p>Features: CAD/CAM Lab, Robotics Lab, Workshop</p>
+            </div>
+
+            <div class="department">
+                <h3>Electrical Engineering</h3>
+                <p>4-year B.Tech Degree Program in Electrical Engineering</p>
+                <p>Seats: 60</p>
+                <p>Features: Power Systems Lab, Control Systems Lab</p>
+            </div>
+
+            <div class="department">
+                <h3>Electronics & Communication</h3>
+                <p>4-year B.Tech Degree Program in Electronics and Communication</p>
+                <p>Seats: 60</p>
+                <p>Features: VLSI Lab, Communication Lab</p>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>United Institute of Technology was established in 2003 with a vision to create world-class engineers. Our institution is approved by AICTE and affiliated to AKTU.</p>
+            <h3>Our Achievements</h3>
+            <ul>
+                <li>NAAC Accredited</li>
+                <li>90% Placement Record</li>
+                <li>Research Collaborations with Leading Industries</li>
+                <li>State-of-the-art Infrastructure</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Address</h3>
+                    <p>NH-24, Naramau, Allahabad - Prayagraj Road</p>
+                    <p>Prayagraj, Uttar Pradesh 211010</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p>Phone: +91-XXXXXXXXXX</p>
+                    <p>Email: info@united.ac.in</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Quick Links</h3>
+                    <p>Admissions: admissions@united.ac.in</p>
+                    <p>Placements: placements@united.ac.in</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 United Institute of Technology. All rights reserved.</p>
+        <p>Follow us on: Facebook | Twitter | LinkedIn | Instagram</p>
+    </footer>
+</body>
+</html> 
