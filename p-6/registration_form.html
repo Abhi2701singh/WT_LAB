@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Registration Form</title>
+</head>
+<body>
+    <h1>College Registration Form</h1>
+    
+    <form action="#" method="post">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea><br><br>
+        </fieldset>
+
+        <!-- Academic Information -->
+        <fieldset>
+            <legend>Academic Information</legend>
+            
+            <label for="program">Desired Program:</label>
+            <select id="program" name="program" required>
+                <option value="">Select a program</option>
+                <option value="computer_science">Computer Science</option>
+                <option value="engineering">Engineering</option>
+                <option value="business">Business Administration</option>
+                <option value="arts">Arts & Humanities</option>
+                <option value="science">Science</option>
+            </select><br><br>
+            
+            <label for="semester">Starting Semester:</label>
+            <select id="semester" name="semester" required>
+                <option value="">Select semester</option>
+                <option value="fall">Fall</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+            </select><br><br>
+            
+            <label for="highschool">High School Name:</label>
+            <input type="text" id="highschool" name="highschool" required><br><br>
+            
+            <label for="gpa">High School GPA:</label>
+            <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="4.0" required><br><br>
+        </fieldset>
+
+        
+        <br>
+        <input type="submit" value="Submit Registration">
+        <input type="reset" value="Clear Form">
+    </form>
+</body>
+</html> 

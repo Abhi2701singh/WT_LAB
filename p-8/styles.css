@@ -1,0 +1,163 @@
+/* Modern CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3436;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.list-section {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.list-section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Custom unordered list */
+.custom-list {
+    list-style: none;
+}
+
+.custom-list li {
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    color: #2d3436;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 25px;
+}
+
+.custom-list li::before {
+    content: '•';
+    color: #6c5ce7;
+    font-size: 1.5em;
+    position: absolute;
+    left: 10px;
+}
+
+/* Numbered list */
+.numbered-list {
+    list-style: none;
+    counter-reset: custom-counter;
+}
+
+.numbered-list li {
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    color: #2d3436;
+    counter-increment: custom-counter;
+    position: relative;
+    padding-left: 50px;
+}
+
+.numbered-list li::before {
+    content: counter(custom-counter);
+    background: #6c5ce7;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9em;
+}
+
+/* Fancy list */
+.fancy-list {
+    list-style: none;
+}
+
+.fancy-list li {
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    color: #2d3436;
+    position: relative;
+    padding-left: 35px;
+    border-left: 3px solid #6c5ce7;
+}
+
+.fancy-list li::before {
+    content: "✓";
+    color: #6c5ce7;
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+}
+
+/* Hover effects */
+.custom-list li:hover,
+.numbered-list li:hover,
+.fancy-list li:hover {
+    background: #6c5ce7;
+    color: white;
+    transform: translateX(10px);
+}
+
+.custom-list li:hover::before {
+    color: white;
+}
+
+.fancy-list li:hover::before {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .list-section {
+        padding: 15px;
+    }
+} 

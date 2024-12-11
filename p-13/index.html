@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Information Form</title>
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Person Information Form</h2>
+        <form id="personForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <div class="form-group">
+                <label for="qualification">Qualification:</label>
+                <select id="qualification" name="qualification" required>
+                    <option value="">Select Qualification</option>
+                    <option value="High School">High School</option>
+                    <option value="Bachelor's">Bachelor's Degree</option>
+                    <option value="Master's">Master's Degree</option>
+                    <option value="PhD">PhD</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="showInformation()">Submit</button>
+        </form>
+
+        <div id="result">
+            <h3>Submitted Information:</h3>
+            <p id="info"></p>
+        </div>
+    </div>
+
+    <script>
+        function showInformation() {
+            // Get form values
+            const name = document.getElementById('name').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const qualification = document.getElementById('qualification').value;
+
+            // Validate form
+            if (!name || !dob || !gender || !qualification) {
+                alert('Please fill all the fields');
+                return;
+            }
+
+            // Format the date
+            const formattedDate = new Date(dob).toLocaleDateString();
+
+            // Create information string
+            const information = `
+                Name: ${name}<br>
+                Date of Birth: ${formattedDate}<br>
+                Gender: ${gender}<br>
+                Qualification: ${qualification}
+            `;
+
+            // Display information
+            document.getElementById('info').innerHTML = information;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html> 

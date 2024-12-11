@@ -1,0 +1,64 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 25px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 15px 25px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  white-space: nowrap;
+}
+
+th {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td {
+  color: #4b5563;
+  font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tr:hover {
+  background-color: #eef2ff;
+  transition: background-color 0.2s ease;
+}
+
+/* For responsive tables */
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+} 
+
+/* Add specific width for price column to align numbers */
+tr td:last-child {
+  text-align: right;
+  min-width: 100px;
+} 
